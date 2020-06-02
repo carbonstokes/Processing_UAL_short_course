@@ -1,1 +1,33 @@
+float x,y;
 
+float radius;
+
+float angle = 0;
+float val = 20;
+float offset = 0.02;
+
+void setup() {
+  size(800,800);
+  translate(width/2,height/2);
+  rectMode(CENTER);
+  noFill();
+}
+
+void draw() {
+  background(255);
+  translate(mouseX,mouseY);
+
+  for(int angle=0; angle<360; angle++) {
+    pushMatrix();
+    rotate(radians(angle));
+    line(0,0, random(50,300),0);
+    stroke((angle + 2) %255, (angle + 8) % 255, (angle + 5)%255);
+    rect(300,0,200,60);
+    rect(0,0,width,height);
+    translate(width/2,height/2);
+    float distance = 0.3;
+    popMatrix();
+  
+  println(angle);
+  }
+}
