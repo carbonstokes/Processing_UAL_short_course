@@ -1,1 +1,15 @@
+size(400,400);
 
+noFill();
+stroke(#645CC6);
+
+rectMode(CENTER);
+ellipse(50,200,50,50);
+rect(50,50,60,60);
+
+strokeWeight(5);
+line(50,0,50,300);
+line(0,50,400,50);
+
+strokeWeight(30);
+point(200,200);
